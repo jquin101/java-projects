@@ -1,0 +1,53 @@
+import java.util.*;
+public class Employee {
+
+	public static void main(String[] args) {}
+		// Variables
+		private String name;
+		private int ID;
+		private int numberOfYears;
+
+		// Constructors
+		public Employee(String initname, int initID, int initNumYears)
+		{
+			name = initname;
+			ID = initID;
+			numberOfYears = initNumYears;
+		}
+		
+		// Accessors
+		public String getName()
+		{
+			return name;
+		}
+		public int getID()
+		{
+			return ID;
+		}
+		public int getYears()
+		{
+			return numberOfYears;
+		}
+		
+		//Mutators
+		public void setName(String newName)
+		{
+			name = newName;
+		}
+		public void setID(int newID)
+		{
+			ID = newID;
+		}
+		public void setYears(int newYears)
+		{
+			numberOfYears = newYears;
+		}
+		
+		// Methods
+		public void Display(){
+			System.out.println("Name: " + name);
+			System.out.println("Employee ID: " + ID);
+			System.out.println("Number Of Years: " + numberOfYears);
+		}
+
+}
