@@ -1,0 +1,51 @@
+import java.util.*;
+public class MaxMin {
+
+	public static void main(String[] args) {
+		//This program reads 10 integers from the keyboard, and stores them in an array.
+		//Then, finds the index of the maximum and minimum values in the array.
+		Scanner console = new Scanner(System.in);
+		System.out.println("This program asks for 10 integers, then finds the index of the " +
+							"maximum and minimum values.");
+		int[] list = new int[10];
+		for (int i = 0; i < 10; i++) {
+			System.out.println("Enter any integer: ");
+			list[i] = console.nextInt();
+		}
+		int maximum = max(list);
+		int minimum = min(list);
+		
+		int indexMin = -1;
+		for (int i = 0; (i < list.length) && (indexMin == -1); i++) {
+	        if (list[i] == maximum) {
+	            indexMin = i;
+	        }
+	    }
+		int indexMax = -1;
+		for (int i = 0; (i < list.length) && (indexMax == -1); i++) {
+	        if (list[i] == minimum) {
+	            indexMax = i;
+	        }
+	    }
+		System.out.println("The maximum is " + maximum + " at index " + indexMin);
+		System.out.println("The minimum is " + minimum + " at index " + indexMax);
+	}
+	public static int max(int[] array) {
+		int largest = array[0];
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] > largest) {
+				largest = array[i];
+			}
+		}
+		return largest;
+	}
+	public static int min(int[] array) {
+		int smallest = array[0];
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] < smallest) {
+				smallest = array[i];
+			}
+		}
+		return smallest;
+	}
+}
