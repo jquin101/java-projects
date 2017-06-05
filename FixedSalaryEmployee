@@ -1,0 +1,38 @@
+import java.util.*;
+public class FixedSalaryEmployee extends Employee
+{
+
+	public static void main(String[] args) {}
+		// Variables
+		private double MonthlySalary;
+		private double TaxPercentage;
+		
+		// Constructor
+		public FixedSalaryEmployee(String initname, int initID, int initNumYears, double initSalary,
+				double initTax) {
+			super(initname, initID, initNumYears);
+			MonthlySalary = initSalary;
+			TaxPercentage = initTax;
+		}
+		
+		// Accessor
+		public double getSalary()
+		{
+			return MonthlySalary;
+		}
+		
+		// Mutator
+		public void setSalary(double newSalary)
+		{
+			MonthlySalary = newSalary;
+		}
+		
+		public void Display() {
+			super.Display();
+			System.out.println("Salary: " + MonthlySalary);
+			System.out.println("Tax Rate: " + TaxPercentage);
+			
+
+	}
+
+}

@@ -1,0 +1,49 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+public class  ListenerDemo extends JFrame 
+{
+  public  ListenerDemo() 
+  {
+    // Create two buttons
+    JButton jbt1 = new JButton("Mickey");
+    JButton jbt2 = new JButton("Minnie");
+
+    // Create a panel to hold buttons
+    JPanel panel = new JPanel();
+    panel.add(jbt1);
+    panel.add(jbt2);
+    add(panel);
+
+    // Create and register anonymous inner class listener
+    jbt1.addActionListener(new ActionListener() 
+    {
+        public void actionPerformed(ActionEvent e) 
+        {
+          System.out.println("You clicked on "+ e.getActionCommand() );
+        }
+     }
+    );
+    
+
+    jbt2.addActionListener(new ActionListener() 
+    {
+        public void actionPerformed(ActionEvent e) 
+        {
+        System.out.println("You clicked on "+ e.getActionCommand() );
+        }
+     }
+    );
+
+
+  }
+
+  /** Main method */
+  public static void main(String[] args) 
+  {
+    JFrame frame = new  ListenerDemo();
+    frame.setTitle(" ListenerDemo");
+    frame.pack();
+    frame.setVisible(true);
+  }
+}

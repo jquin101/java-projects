@@ -1,0 +1,37 @@
+import java.util.*;
+public class CommissionEmployee extends Employee
+{
+
+	public static void main(String[] args) {}
+		// Variables
+		private double Sales;
+		private double PercentageTaken;
+		
+		// Constructor
+		public CommissionEmployee(String initname, int initID, int initNumYears, double initSales,
+				double initPercentage) {
+			super(initname, initID, initNumYears);
+			Sales = initSales;
+			PercentageTaken = initPercentage;
+		}
+		
+		// Accessor
+				public double getSales()
+				{
+					return Sales;
+				}
+				
+				// Mutator
+				public void setSales(double newSales)
+				{
+					Sales = newSales;
+				}
+		
+		public void Display() {
+			super.Display();
+			System.out.println("Sales: " + Sales);
+			System.out.println("Commission Rate: " + PercentageTaken);
+
+	}
+
+}

@@ -1,0 +1,65 @@
+
+public class Product {
+
+	public static void main(String[] args) {}
+		// Variables
+		private String name;  // product name
+		private int id;  // product id number
+		private double price;  // product price
+		private int quantity;  // product quantity
+
+		// Constructors
+		public Product()
+		{
+			name = "";
+			id = 0;
+			price = 0;
+			quantity = 0;
+		}
+		
+		public Product(String name, int id, double price, int quantity) {
+		}
+
+		// Accessors
+		public String getName()
+		{
+			return name;
+		}
+		public int getID()
+		{
+			return id;
+		}
+		public double getPrice()
+		{
+			return price;
+		}
+		public int getQuant()
+		{
+			return quantity;
+		}
+		
+		// Mutators
+		public void setName(String newName)
+		{
+			name = newName;
+		}
+		public void setID(int newID)
+		{
+			id = newID;
+		}
+		public void setPrice(double newPrice)
+		{
+			price = newPrice;
+		}
+		public void setQuant(int newQuant)
+		{
+			quantity = newQuant;
+		}
+		
+		// Methods
+		public double total(){
+			return price * quantity;
+		}
+		
+	}
+

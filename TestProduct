@@ -1,0 +1,36 @@
+import java.util.*;
+public class TestProduct {
+
+	public static void main(String[] args) {
+		Scanner console = new Scanner(System.in);
+		Product prod = new Product();
+		String name = "";
+		int number = 10;
+		
+		Product[] list = new Product[number];
+		
+		for (int i = 0; i < list.length; i++) {
+			System.out.print("What is product " + (i + 1) + " 's name?: ");
+				name = console.nextLine();
+				prod.setName(name);
+			
+			System.out.print("Enter " + name + " 's ID number: ");
+				int id = console.nextInt();
+				prod.setID(id);
+				
+			System.out.print(name + "'s price: ");
+				double price = console.nextDouble();
+				prod.setPrice(price);
+				
+			System.out.print("Enter the quantity of " + name + "'s in inventory: ");
+				int quant = console.nextInt();
+				prod.setQuant(quant);
+				
+			list[i] = new Product(name, id, price, quant);
+			console.nextLine();
+		}
+	
+		
+	}
+
+}
